@@ -6,17 +6,17 @@ let options = document.querySelectorAll(".options > div");
 let sectionImage = document.querySelector(".section .image");
 let sectionImageArr = [`images/section-image1.jpg`, `images/section-image2.png`, `images/section-image3.webp`];
 
+let formOut = false;
+
 contactUs.addEventListener("click", () => {
-    form.style.scale = "1.1";
-    form.style.opacity = "1";
+    if (!formOut) {
+        form.style.scale = "1.1";
+        form.style.opacity = "1";
 
-    setTimeout(() => {
-        form.style.scale = "1";
-    }, 400);
-});
-
-document.addEventListener("click", (dets) => {
-    if (dets.target !== contactUs && dets.target !== form) {
+        setTimeout(() => {
+            form.style.scale = "1";
+        }, 400);
+    } else {
         form.style.scale = "1.1";
 
         setTimeout(() => {
@@ -24,6 +24,8 @@ document.addEventListener("click", (dets) => {
             form.style.opacity = "0";
         }, 400);
     }
+
+    formOut ^= 1;
 });
 
 function highlight(special) {
