@@ -133,6 +133,8 @@ button {
     border: 0;
     border-bottom: 1px solid black;
     font-family: Poppins;
+    color: #2d3142;
+    letter-spacing: 0.4px;
 }
 
 .main .pages .page1 form .inputs #email {
