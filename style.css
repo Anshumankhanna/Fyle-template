@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+.red-heading {
+    text-align: left;
+    font: normal normal 600 1.95vw Cormorant SC;
+    letter-spacing: 0px;
+    color: #FF3147;
+    text-transform: uppercase;
+}
+
+.black-heading {
+    text-align: left;
+    font: normal normal bold 3.25vw Cormorant SC;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.paragraphs {
+    text-align: left;
+    font: normal normal normal 16px/30px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.all-flex > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    border-radius: 2px;
+}
+
+.highlight:hover {
+    /* border: 2px solid #000; */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 6px 20px #672C2C1F;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main .pages {
+    width: 64%;
+    height: 100%;
+}
+
+.main .pages > * {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .pages .page1 {
+    height: 100vh;
+    padding: 100px 0;
+    justify-content: space-between;
+    position: relative;
+}
+
+.main .pages .page1 > * {
+    height: 100%;
+}
+
+.main .pages .page1 form {
+    width: 450px;
+    height: 362px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 0 0;
+    scale: 0;
+    font-family: Poppins;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    opacity: 0;
+    transition: all ease 0.2s;
+}
+
+.main .pages .page1 form h4 {
+    color: #2D3142;
+}
+
+.main .pages .page1 form .inputs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 0 40px;
+    letter-spacing: 0.4px;
+    color: #6F718F99;
+}
+
+.main .pages .page1 form .inputs > * {
+    flex-grow: 1;
+    height: 25%;
+    padding-left: 5px;
+    border: 0;
+    border-bottom: 1px solid black;
+    font-family: Poppins;
+}
+
+.main .pages .page1 form .inputs #email {
+    width: 100%;
+}
+
+.main .pages .page1 form .terms {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #616678;
+    font-size: 12px;
+    gap: 3px;
+    width: 100%;
+}
+
+.main .pages .page1 form .terms input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #FF3147;
+    border-radius: 2px;
+    width: 14px;
+    height: 14px;
+    outline: none;
+}
+
+.main .pages .page1 form .terms input[type="checkbox"]::before {
+    content: "";
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(10% 45%, 25% 60%, 50% 30%, 60% 40%, 25% 75%, 5% 55%);
+    transform: scale(0) translate(0, 50%);
+    background-color: #FF3147;
+}
+
+.main .pages .page1 form .terms input[type="checkbox"]:checked::before {
+    transform: scale(2);
+}
+
+.main .pages .page1 form .terms span {
+    width: calc(100% - 14px);
+}
+
+.main .pages .page1 form input[type="submit"] {
+    width: 100%;
+    background-color: #FF3147;
+    border: 0;
+    border-radius: 2px;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.main .pages .page1 .text {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main .pages .page1 .text > * {
+    display: flex;
+    justify-content: flex-start;
+    height: fit-content;
+}
+
+.main .pages .page1 .text p {
+    margin: 15px 0;
+}
+
+.main .pages .page1 .text button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 50px;
+    /* UI Properties */
+    background: #FF3147 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font: normal normal 600 14px/26px Poppins;
+    margin-top: 15px;
+    outline: none;
+}
+
+.main .pages .page1 .text button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .pages .page1 .image {
+    width: 40%;
+    height: 100%;
+    background-image: url("images/hero.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.main .pages .page2 {
+    height: 100vh;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.main .pages .page2 > * {
+    width: 100%;
+}
+
+.main .pages .page2 .top-text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 35px;
+}
+
+.main .pages .page2 .top-text > * {
+    display: flex;
+}
+
+.main .pages .page2 .top-text .headings {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+}
+
+.main .pages .page2 .top-text .headings .red-heading {
+    font-size: 24px;
+}
+
+.main .pages .page2 .top-text .headings .black-heading {
+    margin-top: 15px;
+    font-size: 45px;
+}
+
+.main .pages .page2 .top-text .para {
+    align-items: flex-end;
+    width: 50%;
+}
+
+.main .pages .page2 .sliding-images {
+    flex-grow: 1;
+}
+
+.main .pages .page2 .sliding-images > * {
+    width: 100%;
+}
+
+.main .pages .page2 .sliding-images .flipping-images {
+    height: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .pages .page2 .sliding-images .flip-image {
+    width: 32%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    transition: all ease 1s;
+}
+
+.main .pages .page2 .sliding-images .flip-image > img {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    transition: all ease 0.5s;
+}
+
+.main .pages .page2 .sliding-images .flip-image .flip-card {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #FF3147;
+    /* padding: 15px 5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+    rotate: y 180deg;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.main .pages .page2 .sliding-images .flip-image .flip-card > img {
+    width: 57px;
+    height: 57px;
+}
+
+.main .pages .page2 .sliding-images .flip-image .flip-card > h6 {
+    text-align: center;
+    font: normal normal 600 24px/26px Cormorant SC;
+    letter-spacing: 0px;
+    color: #FFFFFF;;
+}
+
+.main .pages .page2 .sliding-images .flip-image .flip-card > p {
+    text-align: center;
+    font: normal normal normal 16px/30px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.main .pages .page2 .sliding-images .flip-image .flip-card > a {
+    text-decoration: none;
+}
+
+.main .pages .page2 .sliding-images .flip-image .flip-card > a > button {
+    background: #F4F4F4 0% 0% no-repeat padding-box;
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+    padding: 8px 15px;
+    margin-top: 14px;
+    cursor: pointer;
+}
+
+.main .pages .page2 .sliding-images .flip-image .flip-card > a > button > span {
+    text-align: left;
+    font: normal normal 600 14px/26px Poppins;
+    letter-spacing: 1.4px;
+    color: #FF3147;
+}
+
+.main .pages .page2 .sliding-images .flip-image .flip-card > a > button > img {
+    width: 37px;
+    height: 10px;
+}
+
+.main .pages .page2 .sliding-images .dots {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.main .pages .page2 .sliding-images .dots .float {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.main .pages .page2 .sliding-images .dots .float > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main .pages .page2 .sliding-images .dots .float > * > * {
+    /* transform: translate(50%, 50%); */
+    position: absolute;
+}
+
+.main .pages .page2 .sliding-images .dots .float > * > .highlight-dot {
+    z-index: 3;
+    opacity: 1;
+}
+
+.main .pages .page2 .sliding-images .dots .float > * > .normal-dot {
+    z-index: 1;
+    opacity: 0;
+}
+
+.main .pages .mid-page1 {
+    width: 100%;
+    height: 50vh;
+    flex-direction: column;
+}
+
+.main .pages .mid-page1 .qualities {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.main .pages .mid-page1 .qualities .quality {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    font-family: Poppins;
+}
+
+.main .pages .mid-page1 .qualities .quality img {
+    width: 60px;
+    /* height: 72px; */
+}
+
+.main .pages .mid-page1 .qualities .quality h6 {
+    font-size: 15px;
+    font-family: Poppins;
+}
+
+.main .pages .page3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0 20px 0;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+}
+
+.main .pages .page3 .section {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.main .pages .page3 .section .image {
+    width: 65%;
+    height: 100%;
+    background-image: url("images/section-image2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-grow: 10;
+    border-radius: 5px;
+}
+
+.main .pages .page3 .section .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    background-color: #f6f6f6;
+    font-family: Poppins;
+}
+
+.main .pages .page3 .section .options > * {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.main .pages .page4 {
+    width: 100%;
+    height: 120vh;
+    flex-direction: column;
+    gap: 20vh;
+}
+
+.main .pages .page4 .growth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px
+}
+
+.main .pages .page4 .growth .stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    gap: 10px;
+}
+
+.main .pages .page4 .growth .stats > * {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.main .pages .page4 .growth .stats > * .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.main .pages .page4 .growth .stats > * h1 {
+    font: normal normal 300 60px/65px Poppins;
+    letter-spacing: 0px;
+}
+
+.main .pages .page4 .growth .stats > * p {
+    font: normal normal 300 20px/80px Poppins;
+    letter-spacing: 0;
+    line-height: 2vw;
+}
+
+.main .pages .page4 .feedback {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main .pages .page4 .feedback > div {
+    width: 70%;
+    position: relative;
+    font: normal normal normal 20px/34px Poppins;
+}
+
+.main .pages .page4 .feedback > div > img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.main .pages .page4 .feedback > div > div {
+    width: 100%;
+    text-align: left;
+}
+
+.main .pages .page4 .feedback > div > div > * {
+    font-family: Poppins;
+    font-size: 20px;
+    line-height: 34px;
+}
+
+.main .footer {
+    width: 100%;
+    height: 30vh;
+    background-color: #FF3147;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
